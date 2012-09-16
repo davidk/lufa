@@ -11,17 +11,18 @@
 
 # Run "make help" for target help.
 
-MCU          = at90usb1287
-ARCH         = AVR8
-BOARD        = USBKEY
-F_CPU        = 8000000
-F_USB        = $(F_CPU)
-OPTIMIZATION = s
-TARGET       = USBtoSerial
-SRC          = $(TARGET).c Descriptors.c $(LUFA_SRC_USB) $(LUFA_SRC_USBCLASS)
-LUFA_PATH    = ../../LUFA
-CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/
-LD_FLAGS     =
+MCU          	   = atmega32u4
+ARCH         	   = AVR8
+BOARD        	   = ADAFRUITU4
+F_CPU        	   = 16000000
+F_USB        	   = $(F_CPU)
+OPTIMIZATION 	   = s
+TARGET       	   = USBtoSerial
+SRC          	   = $(TARGET).c Descriptors.c $(LUFA_SRC_USB) $(LUFA_SRC_USBCLASS)
+LUFA_PATH          = ../../LUFA
+CC_FLAGS     	   = -DUSE_LUFA_CONFIG_HEADER -IConfig/
+LD_FLAGS     	   =
+AVRDUDE_PROGRAMMER = avr109
 
 # Default target
 all:
