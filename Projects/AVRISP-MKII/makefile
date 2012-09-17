@@ -11,9 +11,9 @@
 
 # Run "make help" for target help.
 
-MCU          = at90usb162
+MCU          = atmega32u4
 ARCH         = AVR8
-BOARD        = USBTINYMKII
+BOARD        = ADAFRUITU4
 F_CPU        = 16000000
 F_USB        = $(F_CPU)
 OPTIMIZATION = s
